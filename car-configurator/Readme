@@ -1,0 +1,23 @@
+# Car Configurator 🚗
+
+Sistema web desenvolvido em Java utilizando Servlets e JSP que permite ao usuário montar um carro com diferentes opcionais e calcular o preço final.
+
+## Tecnologias
+- Java
+- Servlets
+- JSP
+- HTML, CSS, JavaScript (AJAX)
+- Apache Tomcat
+
+## Funcionalidades
+- Seleção de tipo e modelo (dinâmico com AJAX)
+- Escolha de opcionais
+- Cálculo automático do preço com impostos
+- Interface organizada com CSS separado
+
+## Objetivo
+Projeto desenvolvido para prática de Programação Orientada a Objetos e desenvolvimento web com Java.
+
+## Screenshots
+- [Home](assets/home.png)
+- [Resultado](assets/result.png)
