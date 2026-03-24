@@ -1,0 +1,29 @@
+# Employee Retirement Checker 👨‍💼
+
+Sistema web desenvolvido em Java utilizando Servlets e JSP que permite verificar se um empregado está apto a se aposentar com base em critérios de idade e tempo de trabalho.
+
+## Tecnologias
+- Java
+- Servlets
+- JSP
+- HTML, CSS, JavaScript
+- Apache Tomcat
+
+## Funcionalidades
+- Cadastro de nome, idade e tempo de trabalho
+- Verificação das regras de aposentadoria:
+  - Idade mínima de 65 anos
+  - Ou 30 anos de trabalho
+  - Ou 60 anos com pelo menos 25 anos de trabalho
+- Exibição do resultado com mensagem:
+  - "Requerer aposentadoria"
+  - "Não requerer"
+- Redirecionamento entre páginas (sendRedirect)
+- Interface estilizada com CSS separado
+
+## Objetivo
+Projeto desenvolvido para prática de Programação Orientada a Objetos, Servlets e JSP, com foco em regras de negócio e comunicação cliente-servidor.
+
+## Screenshots
+- [Home](assets/home.png)
+- [Resultado](assets/result.png)
