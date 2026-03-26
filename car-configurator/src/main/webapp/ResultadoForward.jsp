@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Resultado</title>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="<%= request.getContextPath() %>/css/style1.css">
 </head>
 
 <body>

@@ -1,59 +1,65 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-<meta charset="UTF-8">
-<title>Configuração de Carro</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
+    <!DOCTYPE html>
+    <html lang="pt-br">
 
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Configuração de Carro</title>
+        <link rel="stylesheet" href="<%= request.getContextPath() %>/css/style1.css">
+    </head>
 
-<div class="container">
+    <body>
 
-<h2>Monte seu Carro</h2>
+        <div class="container">
 
-<form action="carro" method="post">
+            <h2>Monte seu Carro</h2>
 
-Tipo:
-<select id="tipo" name="tipo" onchange="carregarModelos()">
-    <option value="">Selecione</option>
-    <option value="popular">Popular</option>
-    <option value="basico">Básico</option>
-    <option value="suv">SUV</option>
-    <option value="utilitario">Utilitário</option>
-    <option value="sedan">Sedan</option>
-</select>
+            <form action="<%= request.getContextPath() %>/carro" method="POST">
 
-Modelo:
-<select id="modelo" name="modelo"></select>
+                Tipo:
+                <select id="tipo" name="tipo" onchange="carregarModelos()">
+                    <option value="">Selecione</option>
+                    <option value="popular">Popular</option>
+                    <option value="basico">Básico</option>
+                    <option value="suv">SUV</option>
+                    <option value="utilitario">Utilitário</option>
+                    <option value="sedan">Sedan</option>
+                </select>
 
-Motor:
-<select name="motor">
-    <option value="1.0">1.0</option>
-    <option value="2.0">2.0</option>
-</select>
+                Modelo:
+                <select id="modelo" name="modelo" required>
+                    <option value="">Selecione o tipo primeiro</option>
+                </select>
 
-<div class="opcionais">
-<h3>Opcionais</h3>
+                Motor:
+                <select name="motor">
+                    <option value="1.0">1.0</option>
+                    <option value="2.0">2.0</option>
+                </select>
 
-<label><input type="checkbox" name="ar"> Ar</label><br>
-<label><input type="checkbox" name="cambio"> Câmbio automático</label><br>
-<label><input type="checkbox" name="alarme"> Alarme</label><br>
-<label><input type="checkbox" name="pintura"> Pintura especial</label><br>
-<label><input type="checkbox" name="teto"> Teto solar</label><br>
-<label><input type="checkbox" name="multimidia"> Multimídia</label>
-</div>
+                <div class="opcionais">
+                    <h3>Opcionais</h3>
+                    <label><input type="checkbox" name="ar"> Ar (R$ 3.000,00)</label><br>
+                    <label><input type="checkbox" name="cambio"> Câmbio automático (R$ 5.000,00)</label><br>
+                    <label><input type="checkbox" name="alarme"> Alarme (R$ 800,00)</label><br>
+                    <label><input type="checkbox" name="pintura"> Pintura especial (R$ 2.500,00)</label><br>
+                    <label><input type="checkbox" name="teto"> Teto solar (R$ 4.000,00)</label><br>
+                    <label><input type="checkbox" name="multimidia"> Multimídia (R$ 1.800,00)</label>
+                </div>
 
-<br>
+                <br>
 
-<label><input type="checkbox" name="importado"> Importado</label>
+                <label><input type="checkbox" name="importado"> Importado</label>
 
-<button type="submit">Calcular</button>
+                <button type="submit">Calcular</button>
 
-</form>
-</div>
+            </form>
+        </div>
 
-<script src="js/script.js"></script>
+        <script>
+            const contextPath = "<%= request.getContextPath() %>";
+        </script>
+
+        <script src="<%= request.getContextPath() %>/js/script1.js"></script>
 </body>
 </html>

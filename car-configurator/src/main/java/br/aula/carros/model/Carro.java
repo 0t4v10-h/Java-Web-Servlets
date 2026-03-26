@@ -21,6 +21,11 @@ public class Carro {
 
     private void definirPrecoBase() {
 
+        if (modelo == null) {
+            precoBase = 0;
+            return;
+        }
+
         switch (modelo) {
 
             case "Gol": precoBase = 35000; break;
@@ -55,10 +60,11 @@ public class Carro {
         if (ar) total += 3000;
         if (cambio) total += 5000;
         if (alarme) total += 800;
-        if (pintura) total += 4000;
+        if (pintura) total += 2500;
+        if (teto) total += 4000;
         if (multimidia) total += 1800;
 
-        double ipi = motor.equals("1.0") ? 0.10 : 0.20;
+        double ipi = "1.0".equals(motor) ? 0.10 : 0.20;
         total += total * ipi;
 
         if (importado) {
